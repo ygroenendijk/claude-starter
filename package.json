@@ -1,0 +1,8 @@
+{
+  "name": "green-dev-trainingen",
+  "version": "1.0.0",
+  "description": "Green Dev — Shopify Trainingen landing page",
+  "scripts": {
+    "dev": "npx serve . --listen 3000 --single"
+  }
+}
