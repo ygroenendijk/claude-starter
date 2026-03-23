@@ -1,8 +1,31 @@
 {
-  "name": "green-dev-trainingen",
+  "name": "claude-starter",
   "version": "1.0.0",
-  "description": "Green Dev — Shopify Trainingen landing page",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.12",
+    "fdir": "^6.5.0",
+    "nanoid": "^3.3.11",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.3",
+    "postcss": "^8.5.8",
+    "rollup": "^4.59.0",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.15"
+  },
+  "devDependencies": {
+    "vite": "^6.4.1"
+  },
   "scripts": {
-    "dev": "npx serve . --listen 3000 --single"
-  }
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

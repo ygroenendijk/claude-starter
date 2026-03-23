@@ -1,0 +1,13 @@
+# Green Dev — Shopify Training NL
+
+Options -MultiViews
+
+RewriteEngine On
+
+# Let PHP files be handled by PHP directly — never rewrite them
+RewriteRule \.php$ - [L]
+
+# For everything else, fall back to index.html (SPA routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
