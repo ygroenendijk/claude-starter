@@ -154,11 +154,11 @@ function validateForm() {
   // Level
   const levelSelected = Array.from(levelEls).some((r) => r.checked)
   if (!levelSelected) {
-    const fieldset = form.querySelector('.form__fieldset')
+    const fieldset = form.querySelector('fieldset')
     if (fieldset) fieldset.style.outline = '2px solid #f5704a'
     valid = false
   } else {
-    const fieldset = form.querySelector('.form__fieldset')
+    const fieldset = form.querySelector('fieldset')
     if (fieldset) fieldset.style.outline = ''
   }
 
@@ -176,7 +176,7 @@ function markValid(el) {
 }
 
 // Clear validation on input
-document.querySelectorAll('.form__input').forEach((input) => {
+document.querySelectorAll('.form input:not([type="radio"])').forEach((input) => {
   input.addEventListener('input', () => markValid(input))
 })
 
@@ -190,16 +190,4 @@ if (nav) {
       : 'rgba(11, 31, 18, 0.85)'
   }, { passive: true })
 }
-
-/* ── FAQ smooth expand ────────────────────────────────────────── */
-document.querySelectorAll('.faq__item').forEach((details) => {
-  details.addEventListener('toggle', () => {
-    if (details.open) {
-      // Close siblings
-      document.querySelectorAll('.faq__item[open]').forEach((other) => {
-        if (other !== details) other.removeAttribute('open')
-      })
-    }
-  })
-})
 

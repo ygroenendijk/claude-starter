@@ -29,7 +29,7 @@
       <div class="hero__bg-text" aria-hidden="true">SHOPIFY</div>
       <div class="hero__content">
         <p class="hero__label reveal">Training · Nederland · 2026</p>
-        <h1 class="hero__heading reveal" id="hero-heading" style="--reveal-delay: .12s">
+        <h1 class="reveal" id="hero-heading" style="--reveal-delay: .12s">
           Ben jij klaar<br />om Shopify<br /><em>echt</em> te beheersen?
         </h1>
         <p class="hero__sub reveal" style="--reveal-delay: .24s">
@@ -91,8 +91,8 @@
         </div>
 
         <div class="container">
-          <blockquote class="value-prop__pull-quote reveal" id="value-prop-heading">
-            <span class="value-prop__pull-quote-text">
+          <blockquote class="reveal" id="value-prop-heading">
+            <span>
               Elke maand dat je blijft raden,<br />is een maand dat je concurrent het beter doet.
             </span>
           </blockquote>
@@ -146,8 +146,8 @@
             <div class="path-card__tag">
               <span class="mono">01 /</span> Beginner
             </div>
-            <h3 class="path-card__title">Jouw eerste stap in Shopify</h3>
-            <p class="path-card__desc">
+            <h3>Jouw eerste stap in Shopify</h3>
+            <p>
               Je hebt een shop, maar weet niet hoe je die moet beheren. We nemen je van nul naar een professionele Shopify-winkel — zonder technische voorkennis.
             </p>
             <ul class="path-card__list">
@@ -163,8 +163,8 @@
             <div class="path-card__tag">
               <span class="mono">02 /</span> Gevorderd
             </div>
-            <h3 class="path-card__title">Van winkel naar machine</h3>
-            <p class="path-card__desc">
+            <h3>Van winkel naar machine</h3>
+            <p>
               Je winkel draait al, maar je weet dat er meer in zit. Leer automatiseren, optimaliseren en schalen met de tools die echte resultaten geven.
             </p>
             <ul class="path-card__list">
@@ -180,8 +180,8 @@
             <div class="path-card__tag">
               <span class="mono">03 /</span> Developer
             </div>
-            <h3 class="path-card__title">Bouw het voor anderen</h3>
-            <p class="path-card__desc">
+            <h3>Bouw het voor anderen</h3>
+            <p>
               Je wilt Shopify-shops bouwen als vak. Leer Liquid, de Storefront API, Metaobjects en alles wat je nodig hebt om klanten te bedienen.
             </p>
             <ul class="path-card__list">
@@ -231,7 +231,7 @@
             <span class="location-tile__dot" aria-hidden="true"></span>
           </button>
         </div>
-        <p class="locations__note reveal">
+        <p class="reveal">
           <span class="mono">→</span> Exacte data en locaties worden bekendgemaakt zodra er voldoende interesse is per stad.
         </p>
       </div>
@@ -250,7 +250,7 @@
           <p>
             Trainingen starten per stad zodra er genoeg deelnemers zijn. Door je aan te melden help je ons de juiste locaties en data te plannen — en ben jij als eerste aan de beurt.
           </p>
-          <ul class="signup__perks">
+          <ul>
             <li>
               <span class="mono">✓</span>
               Vroegboekkorting voor wachtlijst-deelnemers
@@ -267,11 +267,9 @@
         </div>
 
         <form class="form reveal" id="waitlist-form" novalidate aria-label="Wachtlijst aanmelding" style="--reveal-delay:0.12s;">
-          <div class="form__group">
-            <label class="form__label" for="name">Volledige naam</label>
-            <input
-              class="form__input"
-              type="text"
+          <div class="form__input-wrapper">
+            <label for="name">Volledige naam</label>
+            <input type="text"
               id="name"
               name="name"
               placeholder="Jan de Vries"
@@ -280,11 +278,9 @@
             />
           </div>
 
-          <div class="form__group">
-            <label class="form__label" for="email">E-mailadres</label>
-            <input
-              class="form__input"
-              type="email"
+          <div class="form__input-wrapper">
+            <label for="email">E-mailadres</label>
+            <input type="email"
               id="email"
               name="email"
               placeholder="jan@voorbeeld.nl"
@@ -293,10 +289,10 @@
             />
           </div>
 
-          <div class="form__group">
-            <label class="form__label" for="city">Voorkeursstad</label>
+          <div class="form__input-wrapper">
+            <label for="city">Voorkeursstad</label>
             <div class="form__select-wrap">
-              <select class="form__select" id="city" name="city" required>
+              <select id="city" name="city" required>
                 <option value="" disabled selected>Kies een stad…</option>
                 <option value="amsterdam">Amsterdam</option>
                 <option value="rotterdam">Rotterdam</option>
@@ -304,34 +300,34 @@
                 <option value="groningen">Groningen</option>
                 <option value="eindhoven">Eindhoven</option>
               </select>
-              <span class="form__select-arrow" aria-hidden="true">↓</span>
+              <span aria-hidden="true">↓</span>
             </div>
           </div>
 
-          <div class="form__group">
-            <fieldset class="form__fieldset">
-              <legend class="form__label">Jouw niveau</legend>
+          <div class="form__input-wrapper">
+            <fieldset>
+              <legend>Jouw niveau</legend>
               <div class="form__radio-group">
-                <label class="form__radio-label">
+                <label>
                   <input type="radio" name="level" value="beginner" required />
-                  <span class="form__radio-custom"></span>
-                  <span class="form__radio-text">
+                  <span></span>
+                  <span>
                     <strong>Beginner</strong>
                     <small>Nog weinig ervaring met Shopify</small>
                   </span>
                 </label>
-                <label class="form__radio-label">
+                <label>
                   <input type="radio" name="level" value="advanced" />
-                  <span class="form__radio-custom"></span>
-                  <span class="form__radio-text">
+                  <span></span>
+                  <span>
                     <strong>Gevorderd</strong>
                     <small>Ik heb al een Shopify-winkel</small>
                   </span>
                 </label>
-                <label class="form__radio-label">
+                <label>
                   <input type="radio" name="level" value="developer" />
-                  <span class="form__radio-custom"></span>
-                  <span class="form__radio-text">
+                  <span></span>
+                  <span>
                     <strong>Aspirant-developer</strong>
                     <small>Ik wil Shopify bouwen voor klanten</small>
                   </span>
@@ -345,11 +341,11 @@
             <span class="btn__arrow" aria-hidden="true">→</span>
           </button>
 
-          <p class="form__privacy">
+          <p>
             Je gegevens worden alleen gebruikt om je te informeren over de training. Geen spam, geen doorverkoop.
           </p>
 
-          <div class="form__success" id="form-success" role="alert" aria-live="polite" hidden>
+          <div id="form-success" role="alert" aria-live="polite" hidden>
             <div>
               <span class="mono">✅</span>
               <strong>Gelukt!</strong>
@@ -365,7 +361,7 @@
       <div class="container about__inner">
         <div class="about__logo-wrap reveal" aria-hidden="true">
           <div class="about__logo-bg">
-            <img src="./assets/images/green-dev-logo.svg" alt="" class="about__logo-svg" aria-hidden="true" />
+            <img src="./assets/images/green-dev-logo.svg" alt="" aria-hidden="true" />
           </div>
         </div>
         <div class="about__text reveal" style="--reveal-delay:0.12s;">
@@ -390,37 +386,37 @@
         </div>
         <div class="faq__list">
 
-          <details class="faq__item reveal">
-            <summary class="faq__question">Wanneer starten de trainingen?</summary>
-            <p class="faq__answer">
+          <details class="faq__item reveal" name="faq">
+            <summary>Wanneer starten de trainingen?</summary>
+            <p>
               De precieze data zijn nog niet vastgesteld. We starten per stad zodra er voldoende aanmeldingen zijn. Door je aan te melden op de wachtlijst ben je als eerste op de hoogte en profiteer je van vroegboekkorting.
             </p>
           </details>
 
-          <details class="faq__item reveal">
-            <summary class="faq__question">Hoeveel kost de training?</summary>
-            <p class="faq__answer">
+          <details class="faq__item reveal" name="faq">
+            <summary>Hoeveel kost de training?</summary>
+            <p>
               De prijs wordt bekendgemaakt bij de officiële lancering. Wachtlijst-deelnemers ontvangen een exclusieve vroegboekkorting. De investering is afhankelijk van het niveau en de duur van de training.
             </p>
           </details>
 
-          <details class="faq__item reveal">
-            <summary class="faq__question">Hoe lang duurt een training?</summary>
-            <p class="faq__answer">
+          <details class="faq__item reveal" name="faq">
+            <summary>Hoe lang duurt een training?</summary>
+            <p>
               We plannen intensieve dagtrainingen van 6 tot 8 uur. Je gaat naar huis met concrete kennis die je de volgende dag al kunt toepassen. Geen weken durende cursussen — één dag, maximale impact.
             </p>
           </details>
 
-          <details class="faq__item reveal">
-            <summary class="faq__question">Wat heb ik nodig om mee te doen?</summary>
-            <p class="faq__answer">
+          <details class="faq__item reveal" name="faq">
+            <summary>Wat heb ik nodig om mee te doen?</summary>
+            <p>
               Een laptop en een Shopify-account (gratis proefperiode is prima voor beginners). Voor de developer-training is een basiskennis van HTML en CSS handig, maar geen harde eis.
             </p>
           </details>
 
-          <details class="faq__item reveal">
-            <summary class="faq__question">Kan ik me aanmelden voor meerdere steden of niveaus?</summary>
-            <p class="faq__answer">
+          <details class="faq__item reveal" name="faq">
+            <summary>Kan ik me aanmelden voor meerdere steden of niveaus?</summary>
+            <p>
               Ja. Vul het formulier in met je voorkeur. Als je interesse hebt in meerdere steden of niveaus, neem dan contact op via het formulier of stuur een e-mail — we houden er rekening mee.
             </p>
           </details>
@@ -432,8 +428,8 @@
     <!-- ═══════════════════════════ FINAL CTA ═══════════════════════════ -->
     <section class="final-cta" aria-labelledby="final-cta-heading">
       <div class="container final-cta__inner">
-        <p class="final-cta__label mono reveal">Klaar om te beginnen?</p>
-        <h2 class="final-cta__heading reveal" id="final-cta-heading" style="--reveal-delay:0.12s;">
+        <p class="mono reveal">Klaar om te beginnen?</p>
+        <h2 class="reveal" id="final-cta-heading" style="--reveal-delay:0.12s;">
           Jouw Shopify-kennis<br />start hier.
         </h2>
         <a href="#inschrijven" class="btn btn--lg btn--outline reveal" style="--reveal-delay:0.24s;">

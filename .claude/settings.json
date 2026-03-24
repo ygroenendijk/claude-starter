@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "for port in 5173 4173; do lsof -t -i TCP:$port 2>/dev/null | xargs kill 2>/dev/null; done; true",
+            "statusMessage": "Stopping Vite servers..."
+          }
+        ]
+      }
+    ]
+  }
+}

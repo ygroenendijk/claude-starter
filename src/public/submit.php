@@ -51,7 +51,6 @@ $payload = json_encode([
     'email' => $email,
     'city'  => $city,
     'level' => $level,
-    'token' => $token,
 ]);
 
 $ch = curl_init($appsScriptUrl);

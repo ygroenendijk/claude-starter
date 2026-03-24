@@ -64,12 +64,6 @@ Create the folder structure:
 mkdir -p src/assets/css src/assets/js src/assets/images screenshots
 ```
 
-Then start the dev server:
-```bash
-npm run dev
-```
-Default dev URL: `http://localhost:5173`
-
 **Adding to an existing project**
 ```bash
 npm init -y
@@ -195,6 +189,11 @@ npx capture-website-cli http://localhost:4173 --output screenshots/mobile.png --
 **Package for handoff**
 ```bash
 zip -r delivery.zip dist/
+```
+
+**Close the servers**
+```bash
+for port in 5173 4173; do lsof -t -i TCP:$port 2>/dev/null | xargs kill 2>/dev/null; done
 ```
 
 > If pa11y or Lighthouse flag issues, fix them before packaging. Do not deliver with known WCAG AA violations.
