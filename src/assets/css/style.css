@@ -8,6 +8,14 @@
 /* ── Reset ────────────────────────────────────────────────────── */
 @layer reset {
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  a { color: inherit; text-decoration: none; }
+
+  button { background: none; border: none; color: inherit; cursor: pointer; font: inherit; }
+
+  img, svg { display: block; }
+
+  ul { list-style: none; }
 }
 
 /* ── Base ─────────────────────────────────────────────────────── */
@@ -19,8 +27,6 @@
 
     /* Palette */
     --c-accent:      #b8f54a;
-    --c-accent-dim:  #7db832;
-    --c-accent-glow: rgba(184, 245, 74, 0.12);
     --c-bg:          #0b1f12;
     --c-bg-alt:      #0f2918;
     --c-border:      #2a5538;
@@ -85,14 +91,6 @@
     letter-spacing: -0.02em;
     line-height: 1.05;
   }
-
-  a { color: inherit; text-decoration: none; }
-
-  button { background: none; border: none; color: inherit; cursor: pointer; font: inherit; }
-
-  img, svg { display: block; }
-
-  ul { list-style: none; }
 }
 
 /* ── Layout ───────────────────────────────────────────────────── */
@@ -187,9 +185,9 @@
     }
 
     &:hover {
-      background: #cdff60;
-      border-color: #cdff60;
-      box-shadow: 0 8px 24px rgba(184, 245, 74, 0.25);
+      background: oklch(from var(--c-accent) 100% c h);
+      border-color: oklch(from var(--c-accent) 90% c h);
+      box-shadow: 0 8px 24px oklch(from var(--c-accent) l c h / 0.25);
       transform: translateY(-2px);
 
       .btn__arrow { transform: translateX(4px); }
@@ -785,7 +783,7 @@
       position: absolute;
 
       &.deco-circle--1 {
-        background: radial-gradient(circle, rgba(184, 245, 74, 0.06) 0%, transparent 70%);
+        background: radial-gradient(circle, oklch(from var(--c-accent) l c h / 0.06) 0%, transparent 70%);
         height: 500px;
         right: -100px;
         top: -200px;
@@ -793,7 +791,7 @@
       }
 
       &.deco-circle--2 {
-        background: radial-gradient(circle, rgba(184, 245, 74, 0.04) 0%, transparent 70%);
+        background: radial-gradient(circle, oklch(from var(--c-accent) l c h / 0.04) 0%, transparent 70%);
         bottom: -100px;
         height: 300px;
         left: -50px;
@@ -897,7 +895,7 @@
 
       &:focus {
         border-color: var(--c-accent);
-        box-shadow: 0 0 0 3px var(--c-accent-glow);
+        box-shadow: 0 0 0 3px oklch(from var(--c-accent) l c h / 0.12);
         outline: none;
       }
 
@@ -935,7 +933,7 @@
 
       &:focus {
         border-color: var(--c-accent);
-        box-shadow: 0 0 0 3px var(--c-accent-glow);
+        box-shadow: 0 0 0 3px oklch(from var(--c-accent) l c h / 0.12);
         outline: none;
       }
 
@@ -955,7 +953,7 @@
         gap: 0.75rem;
         min-height: 44px;
 
-        &:hover span:first-of-type { border-color: var(--c-accent-dim); }
+        &:hover span:first-of-type { border-color: oklch(from var(--c-accent) 50% c h); }
 
         input[type="radio"] {
           height: 0;
@@ -1020,7 +1018,7 @@
 
     #form-success {
       align-items: center;
-      background: rgba(184, 245, 74, 0.1);
+      background: oklch(from var(--c-accent) l c h / 0.1);
       border: 1px solid var(--c-accent);
       border-radius: 4px;
       color: var(--c-accent);
@@ -1070,7 +1068,7 @@
 
         &:hover {
           border-color: var(--c-accent);
-          box-shadow: 0 0 40px rgba(184, 245, 74, 0.1);
+          box-shadow: 0 0 40px oklch(from var(--c-accent) l c h / 0.1);
         }
 
         img {
