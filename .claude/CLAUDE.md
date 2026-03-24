@@ -12,15 +12,6 @@ This skill defines the design thinking process, aesthetic guidelines, and code q
 
 ---
 
-## Project rules
-
-The following rule files are automatically loaded and apply to every task:
-
-- `.claude/rules/testing.md` — deliverable checklist to complete before presenting any output
-- `.claude/rules/code-style.md` — responsive behavior, code quality, and accessibility standards
-
----
-
 ## Folder structure
 
 All projects use this structure. Claude has permission to create new files in any of these folders.
